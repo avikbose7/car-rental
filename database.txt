@@ -1,0 +1,64 @@
+create database rentalapp;
+use rentalapp;
+
+desc users;
+select * from users;
+
+CREATE TABLE cars (
+    id INT PRIMARY KEY,
+    brand VARCHAR(50),
+    rating INT,
+    car_name VARCHAR(100),
+    img_url VARCHAR(255),
+    model VARCHAR(50),
+    price DECIMAL(10, 2),
+    speed VARCHAR(50),
+    gps VARCHAR(100),
+    seat_type VARCHAR(100),
+    automatic VARCHAR(50),
+    description TEXT
+);
+desc cars;
+
+drop table cars;
+INSERT INTO cars (id, brand, rating, car_name, img_url, model, price, speed, gps, seat_type, automatic, description) VALUES
+(1, 'Tesla', 112, 'Tesla Malibu', 'nissan-offer.png', 'Model-2023', 5000, '20kmpl', 'GPS Navigation', 'Heated seats', 'Automatic', 'Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.'),
+(2, 'Toyota', 102, 'Toyota Aventador', 'offer-toyota.png', 'Model-2022', 5000, '20kmpl', 'GPS Navigation', 'Heated seats', 'Automatic', 'Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.'),
+(3, 'BMW', 132, 'BMW X3', 'bmw-offer.png', 'Model-2022', 6500, '20kmpl', 'GPS Navigation', 'Heated seats', 'Automatic', 'Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.'),
+(4, 'Nissan', 102, 'Nissan Mercielago', 'nissan-offer.png', 'Model-2022', 7000, '20kmpl', 'GPS Navigation', 'Heated seats', 'Automatic', 'Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.'),
+(5, 'Ferrari', 94, 'Ferrari Camry', 'offer-toyota.png', 'Model-2022', 4500, '20kmpl', 'GPS Navigation', 'Heated seats', 'Automatic', 'Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.'),
+(6, 'Mercedes', 119, 'Mercedes Benz', 'mercedes-offer.png', 'Model-2022', 8500, '20kmpl', 'GPS Navigation', 'Heated seats', 'Automatic', 'Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.'),
+(7, 'Audi', 82, 'Audi Fiesta', 'toyota-offer-2.png', 'Model-2023', 5000, '20kmpl', 'GPS Navigation', 'Heated seats', 'Automatic', 'Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.'),
+(8, 'Colorado', 52, 'Rolls Royce Colorado', 'mercedes-offer.png', 'Model2023', 5000, '20kmpl', 'GPS Navigation', 'Heated seats', 'Automatic', 'Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.');
+
+insert into cars values (9 ,'Phantom', 52, 'Rolls Royce Phantom', 'rollsroyce.png', 'Model-2022', 7000, '20kmpl', 'GPS Navigation', 'Heated seats', 'Automatic', 'Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.');
+
+select * from users where email="abc@yahoo.com";
+select * from cars;
+CREATE TABLE admin (
+  id BIGINT(20) NOT NULL AUTO_INCREMENT,
+  username VARCHAR(50) NOT NULL,
+  password VARCHAR(50) NOT NULL,
+  PRIMARY KEY (id),
+  UNIQUE INDEX username_UNIQUE (username ASC) VISIBLE
+);
+insert into admin values("1","admin","1234");
+select * from users;
+
+show tables;
+drop table booking;
+create table booking (
+id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email varchar(255),
+    phone varchar(50),
+    from_address VARCHAR(255) NOT NULL,
+    to_address VARCHAR(255) NOT NULL,
+    no_of_person int4 not null,
+    no_of_luggage int4 not null,
+    date DATE not null,
+    time DECIMAL(10, 2) NOT NULL
+);
+select*from booking;
+select*from payment;

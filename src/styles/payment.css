@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+/* *{
+font-family: 'Poppins', sans-serif;
+margin:0; padding:0;
+box-sizing: border-box;
+outline: none; border:none;
+text-transform: capitalize;
+transition: all .2s linear;
+} */
+
+.container-payment{
+display: flex;
+justify-content: center;
+align-items: center;
+padding:25px;
+min-height: 100vh;
+background: linear-gradient(90deg, #d5b4a0  60%, #d86900  40.1%);
+}
+
+.container-payment form{
+padding:20px;
+width:30%;
+background: #fff;
+box-shadow: 0 5px 10px rgba(0,0,0,.1);
+border: 2px solid black;
+border-radius: 20px;
+}
+
+.container-payment form .row{
+display: flex;
+flex-wrap: wrap;
+gap:15px;
+}
+
+.container-payment form .row .col{
+flex:1 1 250px;
+}
+
+.container-payment form .row .col .title{
+font-size: 20px;
+color:#333;
+padding-bottom: 5px;
+text-transform: uppercase;
+}
+
+.container-payment form .row .col .inputBox-payment{
+margin:15px 0;
+}
+
+.container-payment form .row .col .inputBox-payment span{
+margin-bottom: 10px;
+display: block;
+}
+
+.container-payment form .row .col .inputBox-payment input{
+width: 100%;
+border:1px solid #ccc;
+padding:10px 15px;
+font-size: 15px;
+text-transform: none;
+}
+
+.container-payment form .row .col .inputBox-payment input:focus{
+border:1px solid #000;
+}
+
+.container-payment form .row .col .flex{
+display: flex;
+gap:10px;
+}
+
+.container-payment form .row .col .flex .inputBox-payment{
+margin-top: 5px;
+}
+
+.container-payment form .row .col .inputBox-payment img{
+height: 30px;
+margin-top: 5px;
+filter: drop-shadow(0 0 1px #000);
+}
+
+.container-payment form .submit-btn{
+width: 100%;
+padding:12px;
+font-size: 17px;
+background: #27ae60;
+color:#fff;
+margin-top: 5px;
+cursor: pointer;
+}
+
+.container-payment form .submit-btn:hover{
+background: #2ecc71;
+}
+

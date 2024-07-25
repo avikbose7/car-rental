@@ -1,0 +1,81 @@
+.booking-form{
+    width: 47.5%;
+}
+
+.booking-form-home{
+    background-image: url(../assets/all-imges/bg_2.jpg);
+    padding-left: 30%;
+    padding-right: 30%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.header-book{
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    background: #000d6b;
+    color: white;
+    border-radius: 5px;
+}
+.booking-form-home Form{
+    backdrop-filter: blur(5px);
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.booking-form input{
+    padding: 8px 15px;
+    border: 1px solid #7c8a972a;
+    color: #7c8a97;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.booking-form select, 
+.textarea{
+    width: 100%;
+    padding: 10px 15px;
+    color: #7c8a97;
+    border: 1px solid #7c8a972a;
+    border-radius: 4px;
+    resize: none;
+}
+.journey-time{
+    background: white;
+    border-radius: 4px;
+    padding: 8px 15px;
+    border: 1px solid #7c8a972a;
+    color: #7c8a97;
+    width: 100%;
+    border-radius: 4px;
+}
+/* .time__picker::before{
+    content: "Journey Time";
+    color: #7c8a97;
+    margin-right: 0.5rem;
+} */
+
+.textarea:focus,
+.booking-form input:focus,
+.booking-form select:focus{
+    outline: none;
+}
+.payment-btn{
+    display: inline;
+}
+@media only screen and (max-width: 768px) {
+    .booking-form{
+        width: 100%;
+    }
+
+    .booking-form input,
+    .textarea,
+    .booking-form select{
+        font-size: 0.8rem;
+    }
+}
